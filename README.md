@@ -1,2 +1,3 @@
 # FPTools
-Mathematica tools I frequently use for debugging, introspection etc
+
+- Mathematica tools I frequently use for debugging, introspection etc.

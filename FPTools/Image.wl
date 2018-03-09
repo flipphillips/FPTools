@@ -1,0 +1,1 @@
+FPImageIdentify[image_Image,n_:5]:=ImageIdentify[image, All, n, "Probability"]
