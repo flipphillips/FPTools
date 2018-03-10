@@ -2,9 +2,9 @@
 Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
 
 (* Entity *)
-EntityExamine::usage = "EntityExamine[entity] does its best to list all the properties associated with the entity object supplied.";
-EntityBroaden::usage = "EntityBroaden[entity,depth] recursively climbs the Concept hierarchy until it hits the terminal Entity Entity or after depth dives. Returns a list of Broader Concepts at each level.";
-
+EntityPropertiesDataset::usage = "EntityPropertiesDataset[entity] does its best to list all the properties associated with the entity object supplied.";
+ConceptBroaden::usage = "ConceptBroaden[entity,depth] recursively climbs the Concept hierarchy until it hits the terminal Concept 'Entity' or after depth dives. Returns a list of Broader Concepts at each level.";
+ConceptDistance::usage = "ConceptDistance[entitya,entityb] determines the distance in 'concept steps' between concept a and b."
 (* Image *)
 FPImageIdentify::usage = "FPImageIdentify[image,n] does the standard image identify returnig n (default 5) items and its probabilities.";
 
