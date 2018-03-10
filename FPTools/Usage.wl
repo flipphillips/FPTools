@@ -10,3 +10,6 @@ FPImageIdentify::usage = "FPImageIdentify[image,n] does the standard image ident
 
 (* Internet *)
 $MachineAddressesExternal::usage = "$MachineAddressesExternal gives the IP address of this machine as seen by the outside world."
+
+(* Sugar *)
+ApplyIf::usage = "ApplyIf[f,g,x] applies g to x if f[x] is True."

@@ -14,7 +14,8 @@ Paclet[
     "FPTools`Spelunk",
     "FPTools`EntityExamine","FPTools`EntityBroaden",
     "FPTools`FPImageIdentify",
-    "FPTools`$MachineAddressesExternal"
+    "FPTools`$MachineAddressesExternal",
+    "FPTools`ApplyIf"
     },
    Context -> {"FPTools`"} }
   }
