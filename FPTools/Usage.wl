@@ -13,3 +13,12 @@ $MachineAddressesExternal::usage = "$MachineAddressesExternal gives the IP addre
 
 (* Sugar *)
 ApplyIf::usage = "ApplyIf[f,g,x] applies g to x if f[x] is True."
+
+(* Versioning *)
+FPVersionInfo::usage = "FPVersionInfo[path] gives an association with my primitive home grown versioning system."
+
+FPVersionString::usage = "FPVersionString[path] returns the current build as a string. the option \"Build->True\" adds the build number to the end of the string."
+
+FPWriteVersionInfo::usage = "FPWriteVersionInfo[path,vi] takes a version information structure and writes it out. At this point it doesn't validate its structure."
+
+FPVersionBumpBuild::usage = "FPVersionBumpBuild[path] updates the build number in the version json file."

@@ -1,3 +1,6 @@
 # TODO
 
-- add tools to work with my version.json package
+## Versioning
+- make `WriteVersion` validate
+- address (update/rewrite) `Paclet.m` structures
+- generate stuff for packages
