@@ -1,10 +1,9 @@
+(* ::Package:: *)
 
 (* 
- * Original code by Simon Woods.  
- * See http://mathematica.stackexchange.com/a/15948
- *
+ * Original Spelunk code by Simon Woods.  
+ * http://mathematica.stackexchange.com/a/15948
  *)
-
 
 defboxes[symbol_Symbol] := Hold[symbol] /. _[sym_] :>
         If[MemberQ[Attributes[sym], Locked], "Locked",
@@ -56,3 +55,29 @@ Spelunk[symbol_Symbol] := CellPrint[fancydefinition[symbol]];
 Spelunk[s_String] := CellPrint[fancydefinition[#] &@ToExpression[s, InputForm, Unevaluated]];
 
 SetAttributes[{defboxes, fancydefinition, Spelunk}, HoldFirst] 
+
+
+(* smart property display *)
+PropertiesInfo[thing_] := Module[{props,not},
+  (* not = Pick[thing["Properties"], 
+    Quiet@Check[thing[#], Missing[#]] & /@ 
+     thing["Properties"], _Missing | 
+     With[{thang = thing}, HoldPattern[thang[_]]]];
+  *)
+  props = thing["Properties"];
+  not = Pick[props,
+    MissingQ//@Check[thing[#], Missing[#]] & /@ props];
+  
+  <|"Available"->Complement[props, not],"Missing"->not|>]
+
+PropertiesDataset[thing_] := Module[{t, u},
+  Dataset[
+   <|# -> 
+     If[AtomQ[t = thing[#]], 
+        <|"Value"->t|>,
+        If[
+         Length[u = Union[t]] == 1, <|"Head"->Head[t], "Shape"->Length[t], "Value"->u|>, 
+         <|"Head"->Head[t],"Shape"->Dimensions[t], "Value"->Short[t]|>]]|> & /@ 
+   PropertiesInfo[thing]["Available"]]]
+
+SetAttributes[{PropertiesInfo, PropertiesDataset}, HoldFirst] 

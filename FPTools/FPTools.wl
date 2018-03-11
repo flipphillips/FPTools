@@ -1,6 +1,6 @@
 (* As borrowed from Arnoud's templates *)
 
-PrintTemporary["Loading ",ToString[Length[Names["FPTools`*"]]], " functions"];
+PrintTemporary["Loading ",ToString[Length[Names["FPTools`*"]]], " FPTools functions"];
 
 BeginPackage["FPTools`",{"PacletManager`"}];
 

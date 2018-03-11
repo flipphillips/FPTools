@@ -1,3 +1,7 @@
 # FPTools
 
-- Mathematica tools I frequently use for debugging, introspection etc.
+![](icon.png)
+
+- A set Mathematica tools I frequently use for debugging, introspection &c.
+
+

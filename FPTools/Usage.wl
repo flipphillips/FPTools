@@ -1,5 +1,7 @@
 (* Introspection *)
 Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
+PropertiesInfo::usage = "PropertiesInfo[symbol] returns the {available, unavailable} properties for symbol.";
+PropertiesDataset::usage = "PropertiesDataset[symbol] returns a TableForm of the available properties for symbol.";
 
 (* Entity *)
 EntityPropertiesDataset::usage = "EntityPropertiesDataset[entity] does its best to list all the properties associated with the entity object supplied.";
