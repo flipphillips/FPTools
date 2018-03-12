@@ -57,7 +57,6 @@ Spelunk[s_String] := CellPrint[fancydefinition[#] &@ToExpression[s, InputForm, U
 SetAttributes[{defboxes, fancydefinition, Spelunk}, HoldFirst] 
 
 
-(* smart property display *)
 PropertiesInfo[thing_] := Module[{props,not},
   (* not = Pick[thing["Properties"], 
     Quiet@Check[thing[#], Missing[#]] & /@ 
@@ -66,7 +65,8 @@ PropertiesInfo[thing_] := Module[{props,not},
   *)
   props = thing["Properties"];
   not = Pick[props,
-    MissingQ//@Check[thing[#], Missing[#]] & /@ props];
+    Quiet[(MissingQ[#]||Head[#]==thing)&
+    //@Check[thing[#], Missing[#]] & /@ props]];
   
   <|"Available"->Complement[props, not],"Missing"->not|>]
 

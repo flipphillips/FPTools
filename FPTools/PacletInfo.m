@@ -11,7 +11,7 @@ Paclet[
    (* { "Documentation", MainPage -> "Guides/FPTools", Language -> "English"}, *)
    { "Kernel", 
    Symbols -> {
-    "FPTools`Spelunk","FPTools`ProptertiesInfo","FPTools`PropertiesDataset",
+    "FPTools`Spelunk","FPTools`PropertiesInfo","FPTools`PropertiesDataset",
 
     "FPTools`EntityPropertiesDataset","FPTools`ConceptBroaden","FPTools`ConceptDistance",
     
