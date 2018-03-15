@@ -57,7 +57,7 @@ Spelunk[s_String] := CellPrint[fancydefinition[#] &@ToExpression[s, InputForm, U
 SetAttributes[{defboxes, fancydefinition, Spelunk}, HoldFirst] 
 
 
-PropertiesInfo[thing_] := Module[{props,not},
+PropertiesInformation[thing_] := Module[{props,not},
   (* not = Pick[thing["Properties"], 
     Quiet@Check[thing[#], Missing[#]] & /@ 
      thing["Properties"], _Missing | 
@@ -78,6 +78,6 @@ PropertiesDataset[thing_] := Module[{t, u},
         If[
          Length[u = Union[t]] == 1, <|"Head"->Head[t], "Shape"->Length[t], "Value"->u|>, 
          <|"Head"->Head[t],"Shape"->Dimensions[t], "Value"->Short[t]|>]]|> & /@ 
-   PropertiesInfo[thing]["Available"]]]
+   PropertiesInformation[thing]["Available"]]]
 
-SetAttributes[{PropertiesInfo, PropertiesDataset}, HoldFirst] 
+SetAttributes[{PropertiesInformation, PropertiesDataset}, HoldFirst]
