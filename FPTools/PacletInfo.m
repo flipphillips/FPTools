@@ -5,8 +5,8 @@ Paclet[
   Publisher -> "Skidmore Vision Lab",
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
-  Version -> "0.1.5",
-  BuildNumber -> "21",
+  Version -> "0.1.7",
+  BuildNumber -> "35",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -27,7 +27,10 @@ Paclet[
     
     "FPTools`ApplyIf",
     
-    "FPTools`FPVersionInfo","FPTools`FPVersionString","FPTools`FPWriteVersionInfo","FPTools`FPVersionBumpBuild"
+    "FPTools`FPVersionInformation",
+    "FPTools`FPVersionString","FPTools`FPBuildString",
+    "FPTools`FPWriteVersionInformation","FPTools`FPVersionBumpBuild",
+    "FPTools`UpdatePacletFile"
     },
    Context -> {"FPTools`"} }
   }

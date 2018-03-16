@@ -24,7 +24,10 @@ ApplyIf::usage = "ApplyIf[f,g,x] applies g to x if f[x] is True.";
 
 
 (* Versioning *)
-FPVersionInfo::usage = "FPVersionInfo[path] gives an association with my primitive home grown versioning system.";
+FPVersionInformation::usage = "FPVersionInformation[path] gives an association with my primitive home grown versioning system.";
 FPVersionString::usage = "FPVersionString[path] returns the current build as a string. the option \"Build->True\" adds the build number to the end of the string.";
-FPWriteVersionInfo::usage = "FPWriteVersionInfo[path,vi] takes a version information structure and writes it out. At this point it doesn't validate its structure.";
+FPWriteVersionInformation::usage = "FPWriteVersionInformation[path,vi] takes a version information structure and writes it out. At this point it doesn't validate its structure.";
 FPVersionBumpBuild::usage = "FPVersionBumpBuild[path] updates the build number in the version json file.";
+FPBuildString::usage = "FPBuildString[path] returns the current build number as a string.";
+
+UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo file based on the current version and build in the FP version.json system."

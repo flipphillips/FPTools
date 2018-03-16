@@ -1,16 +1,20 @@
 #!/usr/bin/env wolframscript
 
-Print[];
 (* directory = DirectoryName[$InputFileName]; *)
 directory = Directory[];
+pacletDirectory = FileNameJoin[{directory, "FPTools"}];
+
+Print["Building from: ", directory];
+
 FPVersionBumpBuild[directory];
 
-Print["Using directory: ", directory];
 files = FileNames["*.paclet", directory];
 Print["Found paclets (to be deleted): ", files];
 DeleteFile /@ files;
+
 Print["Building new paclet"];
-paclet = PackPaclet[FileNameJoin[{directory, "FPTools"}]];
+UpdatePacletFile[pacletDirectory,directory];
+paclet = PackPaclet[pacletDirectory];
 Print["New paclet: ", paclet];
 
 Print[];
@@ -21,9 +25,6 @@ Print["Found the following old paclets (uninstalling): ", Map[ #["Location"]&, p
 Map[ PacletUninstall, paclets ];
 
 (* install new version *)
-(* directory = DirectoryName[$InputFileName]; *)
-directory=Directory[];
-Print["Using directory: ", directory];
 files = FileNames["*.paclet", directory];
 Print["Paclet file(s) found: ", files];
 paclet = Last @ Sort @ files;
