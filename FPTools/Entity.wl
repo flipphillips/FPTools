@@ -1,5 +1,7 @@
+(* ::Package:: *)
 
 EntityPropertiesDataset[obj_Entity] := Dataset[Prepend[AssociationMap[obj, obj["Properties"]],"Input" -> InputForm[obj]]]
+
 
 ConceptBroaden[obj_Entity,depth_:Infinity] := 
   NestWhileList[
@@ -7,6 +9,7 @@ ConceptBroaden[obj_Entity,depth_:Infinity] :=
       Flatten[Map[#["BroaderConcepts"] &, 
         DeleteDuplicates[meh]]]], {obj}, (! MemberQ[{##}, Entity["Concept", "Entity::9p9v7"], Infinity]) &, 
     All, depth] /; First[obj] == "Concept"
+
 
 ConceptDistance[obja_Entity, objb_Entity] := 
   Module[{ch1, ch2, ix, d1, d2},
@@ -22,3 +25,6 @@ ConceptDistance[obja_Entity, objb_Entity] :=
   
     d1 + d2 - 2
   ] /; First[obja] == First[objb] == "Concept"
+
+
+ConceptDepth[obj_Entity] := Length[ConceptBroaden[obj]]-1 /; First[obj] == "Concept"
