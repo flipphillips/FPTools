@@ -27,6 +27,10 @@
 
 ## [Unreleased Changes]
 
+### Changed
+- PropertiesInformation -> PropertiesAvailability
+- Works for larger range of object types
+
 
 ## [0.1.8] - 2018-03-20
 
