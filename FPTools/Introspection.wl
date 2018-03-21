@@ -57,18 +57,13 @@ Spelunk[s_String] := CellPrint[fancydefinition[#] &@ToExpression[s, InputForm, U
 SetAttributes[{defboxes, fancydefinition, Spelunk}, HoldFirst] 
 
 
-PropertiesInformation[thing_] := Module[{props,not},
-  (* not = Pick[thing["Properties"], 
-    Quiet@Check[thing[#], Missing[#]] & /@ 
-     thing["Properties"], _Missing | 
-     With[{thang = thing}, HoldPattern[thang[_]]]];
-  *)
-  props = thing["Properties"];
-  not = Pick[props,
-    Quiet[(MissingQ[#]||Head[#]==thing)&
-    //@Check[thing[#], Missing[#]] & /@ props]];
-  
-  <|"Available"->Complement[props, not],"Missing"->not|>]
+PropertiesAvailability[obj_] := Module[{plist,evals,missing,not},
+  plist=obj["Properties"];
+  evals=Quiet[Check[obj[#],Missing[#]]&/@plist];
+  missing=(MissingQ[#]||(Head[#]===obj))&/@evals;
+  not = Pick[plist,missing];
+  <|"Available"->Complement[plist, not],"Missing"->not|>]
+
 
 PropertiesDataset[thing_] := Module[{t, u},
   Dataset[
@@ -78,6 +73,7 @@ PropertiesDataset[thing_] := Module[{t, u},
         If[
          Length[u = Union[t]] == 1, <|"Head"->Head[t], "Shape"->Length[t], "Value"->u|>, 
          <|"Head"->Head[t],"Shape"->Dimensions[t], "Value"->Short[t]|>]]|> & /@ 
-   PropertiesInformation[thing]["Available"]]]
+   PropertiesAvailability[thing]["Available"]]]
 
-SetAttributes[{PropertiesInformation, PropertiesDataset}, HoldFirst]
+
+SetAttributes[{PropertiesAvailability, PropertiesDataset}, HoldFirst]

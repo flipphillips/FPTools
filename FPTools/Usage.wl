@@ -5,8 +5,8 @@
 
 
 Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
-PropertiesInformation::usage = "PropertiesInfo[symbol] returns the {available, unavailable} properties for symbol.";
-PropertiesDataset::usage = "PropertiesDataset[symbol] returns a TableForm of the available properties for symbol.";
+PropertiesAvailability::usage = "PropertiesAvailability[object] returns the {available, unavailable} properties for an object.";
+PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the available properties for object.";
 
 
 (* ::Section:: *)

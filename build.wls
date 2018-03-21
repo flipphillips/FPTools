@@ -2,7 +2,9 @@
 
 (* directory = DirectoryName[$InputFileName]; *)
 directory = Directory[];
-pacletDirectory = FileNameJoin[{directory, "FPTools"}];
+pacletName = "FPTools";
+
+pacletDirectory = FileNameJoin[{directory, pacletName}];
 
 Print["Building from: ", directory];
 
@@ -20,7 +22,7 @@ Print["New paclet: ", paclet];
 Print[];
 
 (* uninstall old paclets first *)
-paclets = PacletFind["FPTools"];
+paclets = PacletFind[pacletName];
 Print["Found the following old paclets (uninstalling): ", Map[ #["Location"]&, paclets]];
 Map[ PacletUninstall, paclets ];
 
@@ -30,3 +32,6 @@ Print["Paclet file(s) found: ", files];
 paclet = Last @ Sort @ files;
 Print["Selecting paclet: ",paclet];
 PacletInstall[paclet, IgnoreVersion -> True];
+
+(* wiki doc? *)
+BuildWikiDocumentation[FileNameJoin[{directory,"..",pacletName<>".wiki"}],pacletName];

@@ -6,7 +6,7 @@ Paclet[
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
   Version -> "0.1.8",
-  BuildNumber -> "38",
+  BuildNumber -> "41",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -17,7 +17,7 @@ Paclet[
       Language -> "English"},
    { "Kernel", 
     Symbols -> {
-    "FPTools`Spelunk","FPTools`PropertiesInformation","FPTools`PropertiesDataset",
+    "FPTools`Spelunk","FPTools`PropertiesAvailability","FPTools`PropertiesDataset",
 
     "FPTools`EntityPropertiesDataset",
     "FPTools`ConceptBroaden","FPTools`ConceptDistance","FPTools`ConceptDepth",

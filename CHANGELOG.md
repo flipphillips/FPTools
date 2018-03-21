@@ -27,6 +27,10 @@
 
 ## [Unreleased Changes]
 
+### Changed
+- PropertiesInformation -> PropertiesAvailability
+- Works for larger range of object types
+
 ### Added
 - Property tools to Introspection
 - icon
