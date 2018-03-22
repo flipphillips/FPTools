@@ -31,10 +31,15 @@
 - PropertiesInformation -> PropertiesAvailability
 - Works for larger range of object types
 
+
+## [0.1.8] - 2018-03-20
+
 ### Added
 - Property tools to Introspection
 - icon
 - this changelog
+- Writes its own paclet stuff now using my version package
+- Bunch of Entity tools
 
 ### Changed
 - main methods of property tools
