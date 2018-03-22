@@ -1,17 +1,8 @@
 {
-<<<<<<< HEAD
-  "name": "FPTools",
-  "major_version": 0,
-  "minor_version": 1,
-  "revision_number": 8,
-  "build_number": 43,
-  "date": "Thu Mar 22 14:25:42 EDT 2018"
-=======
 	"name":"FPTools",
 	"major_version":0,
 	"minor_version":1,
 	"revision_number":9,
 	"build_number":38,
 	"date":"Tue 20 Mar 2018 15:23:14"
->>>>>>> a2c0ea3efee153867998311fcd932fdc908dd4be
 }
