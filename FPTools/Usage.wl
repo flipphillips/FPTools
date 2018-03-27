@@ -1,5 +1,14 @@
 (* ::Package:: *)
 
+
+(* ::Section:: *)
+(*Automatically Generated*)
+
+
+$FPToolsVersion::usage = "$FPToolsVersion gives its best guess as to the version we're using.";
+$FPToolsDebug::usage = "$FPToolsDebug let's us know if the package was built with any debugging tools.";
+
+
 (* ::Section:: *)
 (*Introspection*)
 
@@ -23,8 +32,8 @@ ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of
 (*Image*)
 
 
-FPImageIdentify::usage = "FPImageIdentify[image,n] does the standard image identify returnig n (default 5) items and its probabilities.";
-
+FPImageIdentify::usage = "FPImageIdentify[image,{n}] does the standard image identify returnig n (default 5) items and its probabilities.";
+FPBlurFaces::usage = "FPBlurFaces[image,{r}] blurs faces in image. Optional argument r specifies radius."
 
 (* ::Section:: *)
 (*Internet*)

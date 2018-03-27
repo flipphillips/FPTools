@@ -28,9 +28,14 @@
 ## [Unreleased Changes]
 
 ### Changed
-- PropertiesInformation -> PropertiesAvailability
+- `PropertiesInformation -> PropertiesAvailability`
 - Works for larger range of object types
+- build uses / generates globals now
 
+### Added
+- `ClassTools.wl` - things for classroom examples until I migrate them
+- `FPBlurFaces`
+- `$FPToolsVersion` & `$FPToolsDebug`
 
 ## [0.1.8] - 2018-03-20
 

@@ -1,37 +1,48 @@
 #!/usr/bin/env wolframscript
+#
+# paclet builder
+#
 
-(* directory = DirectoryName[$InputFileName]; *)
+(* gerbils *)
+$packageName="FPTools";
+$versionFile="version.json";
+$globalsFile="Globals.wl";
+
 directory = Directory[];
-pacletName = "FPTools";
-
-pacletDirectory = FileNameJoin[{directory, pacletName}];
+pacletDirectory = FileNameJoin[{directory, $packageName}];
 
 Print["Building from: ", directory];
 
+(* bump build *)
 FPVersionBumpBuild[directory];
 
+(* globals *)
+$FPToolsDebug=False;
+$FPToolsVersion=FPVersionString[directory,"Build"->True];
+
+(* create global file *)
+gfile=FileNameJoin[{directory,$packageName,$globalsFile}];
+If[FileExistsQ[gfile], DeleteFile[gfile]];
+Save[gfile, {$FPToolsDebug, $FPToolsVersion}];
+
+(* delete old paclet *)
 files = FileNames["*.paclet", directory];
 Print["Found paclets (to be deleted): ", files];
 DeleteFile /@ files;
 
+(* build new paclet *)
 Print["Building new paclet"];
 UpdatePacletFile[pacletDirectory,directory];
 paclet = PackPaclet[pacletDirectory];
 Print["New paclet: ", paclet];
 
-Print[];
-
-(* uninstall old paclets first *)
-paclets = PacletFind[pacletName];
+paclets = PacletFind[$packageName];
 Print["Found the following old paclets (uninstalling): ", Map[ #["Location"]&, paclets]];
 Map[ PacletUninstall, paclets ];
 
-(* install new version *)
-files = FileNames["*.paclet", directory];
-Print["Paclet file(s) found: ", files];
-paclet = Last @ Sort @ files;
-Print["Selecting paclet: ",paclet];
+
+(* install new paclet *)
+Print["Installing new paclet"]
 PacletInstall[paclet, IgnoreVersion -> True];
 
-(* wiki doc? *)
-BuildWikiDocumentation[FileNameJoin[{directory,"..",pacletName<>".wiki"}],pacletName];
+Print["Done"]
