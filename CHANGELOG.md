@@ -27,6 +27,10 @@
 
 ## [Unreleased Changes]
 
+## Removed
+- Deleted the 'howto' guide and folded it into the main documentation.
+
+## [0.1.9] - 2018-03-27
 ### Changed
 - `PropertiesInformation -> PropertiesAvailability`
 - Works for larger range of object types
