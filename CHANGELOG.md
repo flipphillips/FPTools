@@ -5,16 +5,6 @@
 ![](icon.png)
 
 <!--
-## Guiding Principles
-
-- Changelogs are for humans, not machines. 
-- There should be an entry for every single version.
-- The same types of changes should be grouped.
-- Versions and sections should be linkable.
-- The latest version comes first.
-- The release date of each versions is displayed.
-- Mention whether you follow Semantic Versioning.
-
 ## Types of changes
 
 - `Added` for new features.
@@ -27,8 +17,23 @@
 
 ## [Unreleased Changes]
 
+## Changed
+- refactored `FP` out of everything possible (FP remains in things that 'override' WL functions)
+- unprotected the globals
+- readme points to docs
+- build builds documentation (but doesn't push it)
+
+## Added
+- `Graphics.wl`
+- `RectangleToDisk`
+- `AddAlphaChannel`
+
+## Fixed
+- `$FPToolsVersion` works now.
+
 ## Removed
-- Deleted the 'howto' guide and folded it into the main documentation.
+- Deleted the 'how to' guide and folded it into the main documentation.
+- `ClassTools.wl` - for now.
 
 ## [0.1.9] - 2018-03-27
 ### Changed

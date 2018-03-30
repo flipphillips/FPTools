@@ -32,9 +32,9 @@ ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of
 (*Image*)
 
 
-FPImageIdentify::usage = "FPImageIdentify[image,{n}] does the standard image identify returnig n (default 5) items and its probabilities.";
-FPBlurFaces::usage = "FPBlurFaces[image,{r}] blurs faces in image. Optional argument r specifies radius."
-
+ImageIdentifyFP::usage = "ImageIdentifyFP[image,{n}] does the standard image identify returnig n (default 5) items and its probabilities.";
+BlurFaces::usage = "BlurFaces[image,{r}] blurs faces in image. Optional argument r specifies radius."
+AddAlphaChannel::usage = "AddAlphaChannel[image] adds a unity alpha channel to image."
 (* ::Section:: *)
 (*Internet*)
 
@@ -48,16 +48,16 @@ $MachineAddressesExternal::usage = "$MachineAddressesExternal gives the IP addre
 
 ApplyIf::usage = "ApplyIf[f,g,x] applies g to x if f[x] is True.";
 
+RectangleToDisk::usage = "RectangleToDisk[rect] takes a rectangle and returns an equivalent disk.";
 
 (* ::Section:: *)
 (*Versioning*)
 
 
-FPVersionInformation::usage = "FPVersionInformation[path] gives an association with my primitive home grown versioning system.";
-FPVersionString::usage = "FPVersionString[path] returns the current build as a string. the option \"Build->True\" adds the build number to the end of the string.";
-FPWriteVersionInformation::usage = "FPWriteVersionInformation[path,vi] takes a version information structure and writes it out. At this point it doesn't validate its structure.";
-FPVersionBumpBuild::usage = "FPVersionBumpBuild[path] updates the build number in the version json file.";
-FPBuildString::usage = "FPBuildString[path] returns the current build number as a string.";
-
+VersionInformation::usage = "VersionInformation[path] gives an association with my primitive home grown versioning system.";
+VersionString::usage = "VersionString[path] returns the current build as a string. the option \"Build->True\" adds the build number to the end of the string.";
+VersionWriteInformation::usage = "VersionWriteInformation[path,vi] takes a version information structure and writes it out. At this point it doesn't validate its structure.";
+VersionBumpBuild::usage = "VersionBumpBuild[path] updates the build number in the version json file.";
+VersionBuildString::usage = "VersionBuildString[path] returns the current build number as a string.";
 
 UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo file based on the current version and build in the FP version.json system."
