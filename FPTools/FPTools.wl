@@ -11,7 +11,8 @@ Begin["`Private`"];
 Module[{files},
 
   (* load in any session *)
-  files={"Introspection.wl","Entity.wl","Image.wl","Internet.wl","Sugar.wl","Versioning.wl","ClassTools.wl"};
+  files={"Introspection.wl","Entity.wl","Image.wl","Internet.wl","Sugar.wl",
+         "Versioning.wl","Globals.wl","Graphics.wl"};
 
   Map[Get[FileNameJoin[{DirectoryName[$InputFileName], #}]] &, files];
 

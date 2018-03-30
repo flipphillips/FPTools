@@ -2,15 +2,15 @@
 
 $versioningFile = "version.json";
 
-FPVersionInformation[path_] := Module[{vp},
+VersionInformation[path_] := Module[{vp},
   vp = FileNameJoin[{path, $versioningFile}];
   If[FileExistsQ[vp],
    Association[Import[vp]],
    None]]
 
-FPVersionString[path_, OptionsPattern[{"Build" -> False}]] := 
+VersionString[path_, OptionsPattern[{"Build" -> False}]] := 
  Module[{vi, vs},
-  vi = FPVersionInformation[path];
+  vi = VersionInformation[path];
   If[vi === None, Return[""]];
   
   vs = StringJoin[
@@ -22,23 +22,23 @@ FPVersionString[path_, OptionsPattern[{"Build" -> False}]] :=
    vs <> " build " <> ToString[vi["build_number"]],
    vs]]
 
-FPBuildString[path_] := 
+VersionBuildString[path_] := 
   Module[{vi},
-    vi = FPVersionInformation[path];
+    vi = VersionInformation[path];
     If[vi === None, "",ToString[vi["build_number"]]]
   ]
 
-FPWriteVersionInformation[path_, vi_] := Module[{vp, vvi = vi},
+VersionWriteInformation[path_, vi_] := Module[{vp, vvi = vi},
   vp = FileNameJoin[{path, $versioningFile}];
   If[FileExistsQ[vp], DeleteFile[vp]];
   vvi["date"] = DateString[];
   Export[vp, vvi]]
 
-FPVersionBumpBuild[path_] := Module[{vi},
-  vi = FPVersionInformation[path];
+VersionBumpBuild[path_] := Module[{vi},
+  vi = VersionInformation[path];
   If[vi === None, Return[{}]];
   vi["build_number"] += 1;
-  FPWriteVersionInformation[path, vi]]
+  VersionWriteInformation[path, vi]]
 
 UpdatePacletFile[ppath_, vpath_] := Module[{peepee, fn},
   fn = FileNameJoin[{ppath, "PacletInfo.m"}];
@@ -48,6 +48,6 @@ UpdatePacletFile[ppath_, vpath_] := Module[{peepee, fn},
   Export[fn,
    StringReplace[peepee,
     {RegularExpression["(?m)^(\\s*)Version\\s*->\\s*\"(.*)\""] -> 
-      "$1Version -> \"" <> FPVersionString[vpath] <> "\"",
+      "$1Version -> \"" <> VersionString[vpath] <> "\"",
      RegularExpression["(?m)^(\\s*)BuildNumber\\s*->\\s*\"(.*)\""] -> 
-      "$1BuildNumber -> \"" <> FPBuildString[vpath] <> "\""}], "Text"]]
+      "$1BuildNumber -> \"" <> VersionBuildString[vpath] <> "\""}], "Text"]]

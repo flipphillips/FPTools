@@ -5,8 +5,8 @@ Paclet[
   Publisher -> "Skidmore Vision Lab",
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
-  Version -> "0.1.9",
-  BuildNumber -> "49",
+  Version -> "0.1.10",
+  BuildNumber -> "68",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -24,15 +24,17 @@ Paclet[
     "FPTools`EntityPropertiesDataset",
     "FPTools`ConceptBroaden","FPTools`ConceptDistance","FPTools`ConceptDepth",
 
-    "FPTools`FPImageIdentify","FPTools`FPBlurFaces",
+    "FPTools`RectangleToDisk",
+
+    "FPTools`ImageIdentifyFP","FPTools`BlurFaces","FPTools`AddAlphaChannel",
 
     "FPTools`$MachineAddressesExternal",
 
     "FPTools`ApplyIf",
 
-    "FPTools`FPVersionInformation",
-    "FPTools`FPVersionString","FPTools`FPBuildString",
-    "FPTools`FPWriteVersionInformation","FPTools`FPVersionBumpBuild",
+    "FPTools`VersionInformation",
+    "FPTools`VersionString","FPTools`VersionBuildString",
+    "FPTools`VersionWriteInformation","FPTools`VersionBumpBuild",
     "FPTools`UpdatePacletFile"
     },
    Context -> {"FPTools`"} }

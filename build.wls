@@ -14,11 +14,12 @@ pacletDirectory = FileNameJoin[{directory, $packageName}];
 Print["Building from: ", directory];
 
 (* bump build *)
-FPVersionBumpBuild[directory];
+VersionBumpBuild[directory];
 
 (* globals *)
+Unprotect[{$FPToolsDebug,$FPToolsVersion}]
 $FPToolsDebug=False;
-$FPToolsVersion=FPVersionString[directory,"Build"->True];
+$FPToolsVersion=VersionString[directory,"Build"->True];
 
 (* create global file *)
 gfile=FileNameJoin[{directory,$packageName,$globalsFile}];
@@ -44,5 +45,9 @@ Map[ PacletUninstall, paclets ];
 (* install new paclet *)
 Print["Installing new paclet"]
 PacletInstall[paclet, IgnoreVersion -> True];
+
+(* Build wiki docs *)
+Print["Building wiki"]
+BuildWikiDocumentation[FileNameJoin[{"..",$packageName<>".wiki"}],$packageName];
 
 Print["Done"]
