@@ -17,21 +17,28 @@
 
 ## [Unreleased Changes]
 
-## Changed
+### Added
+- `Data.wl`
+- `ImportAsDataset` (Not DatasetImport to avoid collision w/ Arnaud's)
+- `FindZeroCrossings`
+
+## [0.1.10] - 2018-04-01
+
+### Changed
 - refactored `FP` out of everything possible (FP remains in things that 'override' WL functions)
 - unprotected the globals
 - readme points to docs
 - build builds documentation (but doesn't push it)
 
-## Added
+### Added
 - `Graphics.wl`
 - `RectangleToDisk`
 - `AddAlphaChannel`
 
-## Fixed
+### Fixed
 - `$FPToolsVersion` works now.
 
-## Removed
+### Removed
 - Deleted the 'how to' guide and folded it into the main documentation.
 - `ClassTools.wl` - for now.
 

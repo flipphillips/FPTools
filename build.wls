@@ -47,7 +47,9 @@ Print["Installing new paclet"]
 PacletInstall[paclet, IgnoreVersion -> True];
 
 (* Build wiki docs *)
-Print["Building wiki"]
-BuildWikiDocumentation[FileNameJoin[{"..",$packageName<>".wiki"}],$packageName];
+wikidir=FileNameJoin[{"..",$packageName<>".wiki"}];
+
+Print["Building wiki at ",wikidir]
+BuildWikiDocumentation[wikidir,$packageName];
 
 Print["Done"]

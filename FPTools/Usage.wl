@@ -60,4 +60,12 @@ VersionWriteInformation::usage = "VersionWriteInformation[path,vi] takes a versi
 VersionBumpBuild::usage = "VersionBumpBuild[path] updates the build number in the version json file.";
 VersionBuildString::usage = "VersionBuildString[path] returns the current build number as a string.";
 
-UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo file based on the current version and build in the FP version.json system."
+UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo file based on the current version and build in the FP version.json system.";
+
+
+(* ::Section:: *)
+(*Data*)
+
+ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as column headers. Default options are \"Headers\"->True, \"RowNames\"->False, \"ImportOptions->None\" ";
+
+FindZeroCrossings::usage = "FindZeroCrossings[list] returns pairs that indicate zero-crossing locations in list.";

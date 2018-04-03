@@ -5,8 +5,8 @@ Paclet[
   Publisher -> "Skidmore Vision Lab",
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
-  Version -> "0.1.10",
-  BuildNumber -> "71",
+  Version -> "0.1.11",
+  BuildNumber -> "77",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -35,7 +35,9 @@ Paclet[
     "FPTools`VersionInformation",
     "FPTools`VersionString","FPTools`VersionBuildString",
     "FPTools`VersionWriteInformation","FPTools`VersionBumpBuild",
-    "FPTools`UpdatePacletFile"
+    "FPTools`UpdatePacletFile",
+
+    "FPTools`ImportAsDataset", "FPTools`FindZeroCrossings"
     },
    Context -> {"FPTools`"} }
   }
