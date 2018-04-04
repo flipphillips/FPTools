@@ -69,3 +69,9 @@ UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo
 ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as column headers. Default options are \"Headers\"->True, \"RowNames\"->False, \"ImportOptions->None\" ";
 
 FindZeroCrossings::usage = "FindZeroCrossings[list] returns pairs that indicate zero-crossing locations in list.";
+
+(*FFMpeg Related*)
+
+$FFMpegPath::usage = "$FFMpegPath is the path to the `ffmpeg` executable.";
+
+ImportMP4Frame::usage = "ImportMP4Frame[file,frame] extracts frame `frame` from MP4 file `file`.";

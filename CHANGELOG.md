@@ -15,7 +15,15 @@
 - `Security` in case of vulnerabilities. 
 -->
 
-## [Unreleased Changes]
+## [Unreleased changes]
+
+### Added
+- `ImportMP4Frame`
+- `$FFMpegPath`
+
+## [0.1.11] - 2018-04-04
+
+- Released for classroom stuff
 
 ### Added
 - `Data.wl`
