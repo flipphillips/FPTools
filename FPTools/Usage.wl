@@ -25,7 +25,7 @@ PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the
 EntityPropertiesDataset::usage = "EntityPropertiesDataset[entity] does its best to list all the properties associated with the entity object supplied.";
 ConceptBroaden::usage = "ConceptBroaden[entity,depth] recursively climbs the Concept hierarchy until it hits the terminal Concept 'Entity' or after depth dives. Returns a list of Broader Concepts at each level.";
 ConceptDistance::usage = "ConceptDistance[entitya,entityb] determines the distance in 'concept steps' between concept a and b.";
-ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of the Entity tree."
+ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of the Entity tree.";
 
 
 (* ::Section:: *)
@@ -33,8 +33,8 @@ ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of
 
 
 ImageIdentifyFP::usage = "ImageIdentifyFP[image,{n}] does the standard image identify returnig n (default 5) items and its probabilities.";
-BlurFaces::usage = "BlurFaces[image,{r}] blurs faces in image. Optional argument r specifies radius."
-AddAlphaChannel::usage = "AddAlphaChannel[image] adds a unity alpha channel to image."
+BlurFaces::usage = "BlurFaces[image] blurs faces in image. Options include Method (Box,Disk,Outline,Eyes,FaceParts) and FilterRadius.";
+AddAlphaChannel::usage = "AddAlphaChannel[image] adds a unity alpha channel to image.";
 (* ::Section:: *)
 (*Internet*)
 

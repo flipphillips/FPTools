@@ -30,6 +30,9 @@
 - `ImportAsDataset` (Not DatasetImport to avoid collision w/ Arnaud's)
 - `FindZeroCrossings`
 
+### Changed
+- `BlurFaces` can blur disks, eyes, outlines, etc. 
+
 ## [0.1.10] - 2018-04-01
 
 ### Changed
