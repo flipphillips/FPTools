@@ -35,6 +35,11 @@ ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of
 ImageIdentifyFP::usage = "ImageIdentifyFP[image,{n}] does the standard image identify returnig n (default 5) items and its probabilities.";
 BlurFaces::usage = "BlurFaces[image] blurs faces in image. Options include Method (Box,Disk,Outline,Eyes,FaceParts) and FilterRadius.";
 AddAlphaChannel::usage = "AddAlphaChannel[image] adds a unity alpha channel to image.";
+$FFMpegPath::usage = "$FFMpegPath is the path to the `ffmpeg` executable.";
+ImportMP4Frame::usage = "ImportMP4Frame[file,frame] extracts frame `frame` from MP4 file `file`.";
+ImportWebFrame::usage = "ImportWebFrame[url] grabs a frame from the stream at url.";
+
+
 (* ::Section:: *)
 (*Internet*)
 
@@ -68,10 +73,8 @@ UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo
 
 ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as column headers. Default options are \"Headers\"->True, \"RowNames\"->False, \"ImportOptions->None\" ";
 
+
+(* ::Section:: *)
+(*Signals*)
 FindZeroCrossings::usage = "FindZeroCrossings[list] returns pairs that indicate zero-crossing locations in list.";
 
-(*FFMpeg Related*)
-
-$FFMpegPath::usage = "$FFMpegPath is the path to the `ffmpeg` executable.";
-
-ImportMP4Frame::usage = "ImportMP4Frame[file,frame] extracts frame `frame` from MP4 file `file`.";

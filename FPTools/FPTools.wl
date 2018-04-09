@@ -12,7 +12,7 @@ Module[{files},
 
   (* load in any session *)
   files={"Introspection.wl","Entity.wl","Image.wl","Internet.wl","Sugar.wl",
-         "Versioning.wl","Globals.wl","Graphics.wl","Data.wl"};
+         "Versioning.wl","Globals.wl","Graphics.wl","Data.wl","Signals.wl"};
 
   Map[Get[FileNameJoin[{DirectoryName[$InputFileName], #}]] &, files];
 

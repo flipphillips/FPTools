@@ -1,3 +1,5 @@
+(* ::Package:: *)
+
 (* dataset stuff *)
 
 
@@ -39,7 +41,13 @@ FindZeroCrossings[l_List] := Module[{t, u, v},
     v = SplitBy[u, First];(*Group into runs of+and-values*){Most[Max[#[[All, 2]]] & /@ v], 
     Rest[Min[#[[All, 2]]] & /@ v]} // Transpose]
 
+
+(* ::Subsection:: *)
+(*ffmpeg things*)
+
+
 $FFMpegPath = "/usr/local/bin/ffmpeg";
+
 
 ImportMP4Frame[f_, frame_] := Module[{command, fx},
   fx = FileNameJoin[{$TemporaryDirectory,"aframe.png"}];
@@ -49,3 +57,26 @@ ImportMP4Frame[f_, frame_] := Module[{command, fx},
     ToString[frame] <> ")\" -vframes 1 -y " <> fx;
 
   If[Run[command] == 0, Import[fx], None]]
+
+ImportWebFrame[url_] := Module[{command,fx},
+  fx = FileNameJoin[{$TemporaryDirectory,"aframe.png"}];
+  
+  command = 
+   $FFMpegPath<>" -y -i " <> url <> " -vframes 1  " <> fx;
+
+  If[Run[command] == 0, Import[fx], None]
+]
+
+(* 
+outdir = FileNameJoin[{$TemporaryDirectory, "cappyPorts2"}];
+Quiet[DeleteDirectory[outdir, DeleteContents -> True]];
+CreateDirectory[outdir]
+
+url = "http://wms-east1.wetmet.net/live/157-02-01/Playlist.m3u8";
+
+url = "http://wms-prod-2.wetmet.net/live/153-05-01/playlist.m3u8";
+
+cmd = "/usr/local/bin/ffmpeg -i " <> url <> 
+  " -t 30:00 -vf fps=1/30 " <> FileNameJoin[{outdir, "out%03d.png"}] <>
+   "&"
+*)
