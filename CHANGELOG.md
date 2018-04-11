@@ -16,13 +16,17 @@
 -->
 
 ## [Unreleased changes]
+- Released a 0.1.12pre for classroom use 11 April
 
 ### Added
 - `ImportMP4Frame`
+- `ImportMP4Frames`
 - `$FFMpegPath`
 
-## [0.1.11] - 2018-04-04
+### Changed
+- Refactor into `Signal.wl`
 
+## [0.1.11] - 2018-04-04
 - Released for classroom stuff
 
 ### Added
@@ -34,7 +38,6 @@
 
 ### Changed
 - `BlurFaces` can blur disks, eyes, outlines, etc. 
-- Refactoring to `Signals`
 
 ## [0.1.10] - 2018-04-01
 
