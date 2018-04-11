@@ -67,6 +67,14 @@ ImportWebFrame[url_] := Module[{command,fx},
   If[Run[command] == 0, Import[fx], None]
 ]
 
+ImportMP4Frames[f_, startTime_, duration_, rate_:1] := Module[{command, fx},
+	fx = FileNameJoin[{$TemporaryDirectory,"ImportFrames"}];
+	Quiet[DeleteDirectory[fx, DeleteContents -> True]];
+	CreateDirectory[fx];
+
+	command = $FFMpegPath<>" -i \""<>f<>"\" -ss "<>ToString[startTime]<>" -t "<>ToString[duration]<>" -r "<>ToString[rate]<>" "<>FileNameJoin[{fx,"%04d.png"}];
+
+	If[Run[command] == 0, Import/@FileNames[FileNameJoin[{fx,"*.png"}]], None]]
 (* 
 outdir = FileNameJoin[{$TemporaryDirectory, "cappyPorts2"}];
 Quiet[DeleteDirectory[outdir, DeleteContents -> True]];

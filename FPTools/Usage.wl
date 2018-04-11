@@ -37,6 +37,7 @@ BlurFaces::usage = "BlurFaces[image] blurs faces in image. Options include Metho
 AddAlphaChannel::usage = "AddAlphaChannel[image] adds a unity alpha channel to image.";
 $FFMpegPath::usage = "$FFMpegPath is the path to the `ffmpeg` executable.";
 ImportMP4Frame::usage = "ImportMP4Frame[file,frame] extracts frame `frame` from MP4 file `file`.";
+ImportMP4Frames::usage = "ImportMP4Frames[file,start,dur] extracts frames from start of dur from MP4 file `file`.";
 ImportWebFrame::usage = "ImportWebFrame[url] grabs a frame from the stream at url.";
 
 

@@ -16,3 +16,4 @@
 ## Data
 - fork off `ffmpeg` stuff.
 - enhance above.
+- check for executable

@@ -17,14 +17,14 @@ BlurFaces[i_Image,OptionsPattern[]]:=Module[{how,fboxs,polys,ff},
 
 		"Outline",(BoundingRegion[#["OutlinePoints"],"MinConvexPolygon"]["BoundaryPolygons"]&)/@FacialFeatures[i,"Landmarks"],
 
-		"Eyes",ff=FacialFeatures[i,"Landmarks"];
-			{Thick,Join[(BoundingRegion[#["RightEyePoints"],"MinConvexPolygon"]["BoundaryPolygons"]&)/@ff,(BoundingRegion[#["LeftEyePoints"],"MinConvexPolygon"]["BoundaryPolygons"]&)/@ff]},
+		"Eyes", ff = FacialFeatures[i,"Landmarks"]; 
+			{Thick, (BoundingRegion[Join[#["RightEyePoints"], #["LeftEyePoints"], #["RightEyePoints"], #["RightEyebrowPoints"]], "MinConvexPolygon"]["BoundaryPolygons"] &) /@ ff},
 
-		"FaceParts",ff=FacialFeatures[i,"Landmarks"];
-			{Thick,Join[
-				(BoundingRegion[Join[#["RightEyePoints"],#["RightEyebrowPoints"]],"MinConvexPolygon"]["BoundaryPolygons"]&)/@ff,(BoundingRegion[Join[#["LeftEyePoints"],#["LeftEyebrowPoints"]],"MinConvexPolygon"]["BoundaryPolygons"]&)/@ff,
-				(BoundingRegion[#["NosePoints"],"MinConvexPolygon"]["BoundaryPolygons"]&)/@ff,
-			(BoundingRegion[#["MouthExternalPoints"],"MinConvexPolygon"]["BoundaryPolygons"]&)/@ff]},
+		"FaceParts", ff = FacialFeatures[i, "Landmarks"];
+			{Thick, Join[
+				(BoundingRegion[Join[#["LeftEyePoints"], #["LeftEyebrowPoints"], #["RightEyePoints"], #["RightEyebrowPoints"]], "MinConvexPolygon"]["BoundaryPolygons"] &) /@ ff,
+				(BoundingRegion[#["NosePoints"], "MinConvexPolygon"]["BoundaryPolygons"] &) /@ ff,
+				(BoundingRegion[#["MouthExternalPoints"], "MinConvexPolygon"]["BoundaryPolygons"] &) /@ ff]},
 
 		(* panic *)
 		_,fboxs

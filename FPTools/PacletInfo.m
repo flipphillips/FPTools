@@ -6,7 +6,7 @@ Paclet[
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
   Version -> "0.1.12",
-  BuildNumber -> "86",
+  BuildNumber -> "92",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -38,7 +38,7 @@ Paclet[
     "FPTools`UpdatePacletFile",
 
     "FPTools`ImportAsDataset", "FPTools`FindZeroCrossings",
-    "FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportWebFrame"
+    "FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportMP4Frames", "FPTools`ImportWebFrame"
     },
    Context -> {"FPTools`"} }
   }
