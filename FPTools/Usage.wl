@@ -81,3 +81,9 @@ ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as
 
 FindZeroCrossings::usage = "FindZeroCrossings[list] returns pairs that indicate zero-crossing locations in list.";
 
+(* ::Section:: *)
+(*Genetic Algorithms*)
+
+GARepopulate::usage = "GARepopulate[pop,fitfunc] creates a new population using fitfunc."
+GAMutate::usage = "GAMutate[chromo] mutates a chromosome."
+GACrossover::usage = "GACrossover[c1,c2] performs a random crossover of c1 & c2. Returns two offspring."

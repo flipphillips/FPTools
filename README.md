@@ -2,7 +2,7 @@
 
 ![](icon.png)
 
-v 0.1.11
+v 0.1.13
 
  A set Mathematica tools I frequently use for debugging, introspection &c.
 

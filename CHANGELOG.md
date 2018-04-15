@@ -16,15 +16,22 @@
 -->
 
 ## [Unreleased changes]
+## [0.1.13] - 2018-04-14
+
 - Released a 0.1.12pre for classroom use 11 April
 
 ### Added
 - `ImportMP4Frame`
 - `ImportMP4Frames`
 - `$FFMpegPath`
+- Simple Genetic Algorithm
+- some sample data files
 
 ### Changed
 - Refactor into `Signal.wl`
+
+### Fixed
+- Documentation
 
 ## [0.1.11] - 2018-04-04
 - Released for classroom stuff
