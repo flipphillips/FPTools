@@ -31,3 +31,7 @@ ImportAsDataset[f_,
    True,
    Dataset[raw]]]
 
+(* Maybe should be split out as 'Statistics' some day *)
+UnitizedGaussianPDF[\[Mu]_, \[Sigma]_] := Module[{pdf},
+  pdf = PDF[NormalDistribution[\[Mu], \[Sigma]]];
+  Evaluate[pdf[#]/ pdf[\[Mu]]] &]

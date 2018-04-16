@@ -75,6 +75,7 @@ UpdatePacletFile::usage = "UpdatePacletFile[ppath,vpath] writes a new PacletInfo
 
 ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as column headers. Default options are \"Headers\"->True, \"RowNames\"->False, \"ImportOptions->None\" ";
 
+UnitizedGaussianPDF::usage = "UnitizedGaussian[mu,sigma] gives a pure function of a PDF whose value at the mean = 1.0.";
 
 (* ::Section:: *)
 (*Signals*)

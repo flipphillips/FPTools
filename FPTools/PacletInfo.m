@@ -5,8 +5,8 @@ Paclet[
   Publisher -> "Skidmore Vision Lab",
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
-  Version -> "0.1.13",
-  BuildNumber -> "103",
+  Version -> "0.1.14",
+  BuildNumber -> "108",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -37,7 +37,8 @@ Paclet[
     "FPTools`VersionWriteInformation","FPTools`VersionBumpBuild",
     "FPTools`UpdatePacletFile",
 
-    "FPTools`ImportAsDataset", "FPTools`FindZeroCrossings",
+    "FPTools`ImportAsDataset", "FPTools`FindZeroCrossings","FPTools`UnitizedGaussianPDF",
+
     "FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportMP4Frames", "FPTools`ImportWebFrame",
 
     "FPTools`GARepopulate","FPTools`GAMutate","FPTools`GACrossover"

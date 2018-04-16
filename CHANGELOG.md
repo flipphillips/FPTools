@@ -16,6 +16,10 @@
 -->
 
 ## [Unreleased changes]
+
+### Added
+- `UnitizedGaussianPDF`
+
 ## [0.1.13] - 2018-04-14
 
 - Released a 0.1.12pre for classroom use 11 April
