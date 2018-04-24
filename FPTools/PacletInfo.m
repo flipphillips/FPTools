@@ -6,7 +6,7 @@ Paclet[
   Copyright -> "©2018- Flip Phillips & Misc Contributors",
   License -> "MIT",
   Version -> "0.1.14",
-  BuildNumber -> "110",
+  BuildNumber -> "124",
   MathematicaVersion -> "11.2+",
   URL -> "https://github.com/flipphillips/FPTools",
   Thumbnail -> "Documentation/icon.png",
@@ -27,7 +27,7 @@ Paclet[
     "FPTools`RectangleToDisk",
 
     "FPTools`ImageIdentifyFP","FPTools`BlurFaces","FPTools`AddAlphaChannel",
-
+    "FPTools`LensDistortPoint", "FPTools`LensDistortionCorrection",
     "FPTools`$MachineAddressesExternal",
 
     "FPTools`ApplyIf",

@@ -2,9 +2,10 @@
 
 ![](icon.png)
 
-v 0.1.13
+v 0.1.14
 
- A set Mathematica tools I frequently use for debugging, introspection &c.
+A set Mathematica tools I frequently use for debugging, introspection &c.
+**Note that there is a bunch of seemingly unrelated stuff in recent versions. This is because I am using this to easily distribute some tools for my classes this semester. At some point I'll refactor all this out, but for now it remains!**
 
 For the time being, a small amount of documentation can be had by looking in the Mathematica Help Browser under "Add-ons and Packages".
 

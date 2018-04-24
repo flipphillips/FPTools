@@ -17,8 +17,14 @@
 
 ## [Unreleased changes]
 
+## [0.1.14] - 2018-04-24
+
 ### Added
 - `UnitizedGaussianPDF`
+- lens distortion model
+
+### Changed
+- `RunProcess` instead of `Run` in the ffmpeg stuff
 
 ## [0.1.13] - 2018-04-14
 

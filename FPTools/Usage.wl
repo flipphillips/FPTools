@@ -41,6 +41,10 @@ ImportMP4Frame::usage = "ImportMP4Frame[file,frame] extracts frame `frame` from 
 ImportMP4Frames::usage = "ImportMP4Frames[file,start,dur] extracts frames from start of dur from MP4 file `file`.";
 ImportWebFrame::usage = "ImportWebFrame[url] grabs a frame from the stream at url.";
 
+LensDistortPoint::usage = "LensDistortPoint[{x,y},{p1,p2},{k1,...}] projects point x,y using the distortion specified in the p and k vectors.";
+
+LensDistortionCorrection::usage = "LensDistortionCorrection[image,{tx,ty},theta,{p1,p1},{k1,k2,k3...}] performs a lens distortion correction along with a generalized translation (t) and rotation (theta). p1 and p2 specify 1st order astygmatism and k1-6 the different orders of distortion beyond that. Note you only need to supply k's up to the desired order of correction.";
+
 
 (* ::Section:: *)
 (*Internet*)
