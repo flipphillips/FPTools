@@ -7,3 +7,8 @@ FindZeroCrossings[l_List] := Module[{t, u, v},
     v = SplitBy[u, First];(*Group into runs of+and-values*){Most[Max[#[[All, 2]]] & /@ v], 
     Rest[Min[#[[All, 2]]] & /@ v]} // Transpose]
 
+
+(* Maybe should be split out as 'Statistics' some day *)
+UnitizedGaussianPDF[\[Mu]_, \[Sigma]_] := Module[{pdf},
+  pdf = PDF[NormalDistribution[\[Mu], \[Sigma]]];
+  Evaluate[pdf[#]/ pdf[\[Mu]]] &]

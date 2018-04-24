@@ -17,6 +17,15 @@
 
 ## [Unreleased changes]
 
+### Added
+- `NewKernelEvaluate`
+- `GetSymbolsDefinedInMX`
+- `FindFaceImages`
+
+### Changed
+- minor housekeeping
+
+
 ## [0.1.14] - 2018-04-24
 
 ### Added

@@ -42,6 +42,18 @@ BlurFaces[i_Image,OptionsPattern[]]:=Module[{how,fboxs,polys,ff},
 		HighlightImage[i, {"Blur", polys}],
 		HighlightImage[i, {{"Blur",OptionValue["FilterRadius"]}, polys}]]]
 
+FindFaceImages[img_, scale_: 1.0, opts : OptionsPattern[FindFaces]] :=
+  Module[{scaledRectangle, r, r2},
+  r = FindFaces[img, opts];
+  
+  scaledRectangle[r_Rectangle, s_] := 
+   r /. x_ :> 
+	 Rectangle[x[[1]] - (Abs[x[[1]] - x[[2]]]/2) (s - 1), 
+	  x[[2]] + (Abs[x[[1]] - x[[2]]]/2) (s - 1)];
+  
+  r2 = scaledRectangle[#, scale] & /@ r;
+  ImageCrop[HighlightImage[img, {White, #}, "Remove"]] & /@ r2]
+
 
 (* ::Subsection:: *)
 (*Alpha Channel*)

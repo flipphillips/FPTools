@@ -16,7 +16,8 @@ $FPToolsDebug::usage = "$FPToolsDebug let's us know if the package was built wit
 Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
 PropertiesAvailability::usage = "PropertiesAvailability[object] returns the {available, unavailable} properties for an object.";
 PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the available properties for object.";
-
+NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result."
+GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile."
 
 (* ::Section:: *)
 (*Entity*)
@@ -34,6 +35,7 @@ ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of
 
 ImageIdentifyFP::usage = "ImageIdentifyFP[image,{n}] does the standard image identify returnig n (default 5) items and its probabilities.";
 BlurFaces::usage = "BlurFaces[image] blurs faces in image. Options include Method (Box,Disk,Outline,Eyes,FaceParts) and FilterRadius.";
+FindFaceImages::usage = "FindFaceImages[image,scale] finds images in an image, scaling the returned image by scale (default 1). Larger values provide more context, smaller less.";
 AddAlphaChannel::usage = "AddAlphaChannel[image] adds a unity alpha channel to image.";
 
 $FFMpegPath::usage = "$FFMpegPath is the path to the `ffmpeg` executable.";

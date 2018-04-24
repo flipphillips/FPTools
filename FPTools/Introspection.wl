@@ -1,9 +1,13 @@
 (* ::Package:: *)
 
-(* 
- * Original Spelunk code by Simon Woods.  
- * http://mathematica.stackexchange.com/a/15948
- *)
+(* ::Subsection:: *)
+(*Spelunk*)
+
+
+(* ::Text:: *)
+(* Original Spelunk code by Simon Woods.  *)
+(*http://mathematica.stackexchange.com/a/15948*)
+
 
 defboxes[symbol_Symbol] := Hold[symbol] /. _[sym_] :>
         If[MemberQ[Attributes[sym], Locked], "Locked",
@@ -50,11 +54,18 @@ processsymbol[a_, b_] := Module[{db},
                        DefaultBaseStyle -> {"Input"}, Appearance->"None", Evaluator -> Automatic]
    ]]
 
+
 Spelunk[symbol_Symbol] := CellPrint[fancydefinition[symbol]];
+
 
 Spelunk[s_String] := CellPrint[fancydefinition[#] &@ToExpression[s, InputForm, Unevaluated]];
 
+
 SetAttributes[{defboxes, fancydefinition, Spelunk}, HoldFirst] 
+
+
+(* ::Subsection:: *)
+(*Properties*)
 
 
 PropertiesAvailability[obj_] := Module[{plist,evals,missing,not},
@@ -77,3 +88,38 @@ PropertiesDataset[thing_] := Module[{t, u},
 
 
 SetAttributes[{PropertiesAvailability, PropertiesDataset}, HoldFirst]
+
+
+(* ::Subsection:: *)
+(*Dumpsave*)
+
+
+(* ::Text:: *)
+(*https://mathematica.stackexchange.com/questions/25027/dumpsave-for-the-forgetful*)
+
+
+(* newKernelEvaluate starts a fresh auxiliary kernel, evaluates expr, *)
+(* quits auxiliary kernel, and returns the result of evaluation. *)
+
+Attributes[NewKernelEvaluate] = HoldAll;
+NewKernelEvaluate[expr_] := Module[
+    {link, result},
+    link = LinkLaunch[First@$CommandLine <> " -mathlink -noprompt"];
+    LinkWrite[link, Unevaluated@EvaluatePacket@expr];
+    result = LinkRead@link;
+    LinkClose@link;
+    Replace[result, ReturnPacket@x_ :> x]
+    ];
+
+
+GetSymbolsDefinedInMX[mxfile_] := Module[
+    {tag},
+    With[{mymxfile=mxfile},
+        NewKernelEvaluate[
+            Block[
+                {$NewSymbol=Sow[#2<>#1, tag]&},
+                Reap[Get[mymxfile],tag][[2]]
+                ]
+            ]
+        ]
+    ];
