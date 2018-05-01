@@ -21,6 +21,7 @@
 - `NewKernelEvaluate`
 - `GetSymbolsDefinedInMX`
 - `FindFaceImages`
+- New `install` script to install w/o building
 
 ### Changed
 - minor housekeeping
