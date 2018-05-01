@@ -6,7 +6,7 @@ Paclet[
 	Copyright -> "©2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
 	Version -> "0.1.15",
-	BuildNumber -> "135",
+	BuildNumber -> "137",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
