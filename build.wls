@@ -4,36 +4,35 @@
 #
 
 (* gerbils *)
-$packageName="FPTools";
-$versionFile="version.json";
 $globalsFile="Globals.wl";
+$directory = Directory[];
+$packageName = VersionInformation[$directory]["name"];
 
-directory = Directory[];
-pacletDirectory = FileNameJoin[{directory, $packageName}];
+pacletDirectory = FileNameJoin[{$directory, $packageName}];
 
-Print["Building from: ", directory];
+Print["Building ",$packageName, " from: ", $directory];
 
 (* bump build *)
-VersionBumpBuild[directory];
+VersionBumpBuild[$directory];
 
 (* globals *)
-Unprotect[{$FPToolsDebug,$FPToolsVersion}]
-$FPToolsDebug=False;
-$FPToolsVersion=VersionString[directory,"Build"->True];
+Unprotect[{$MonitorUtilitiesDebug,$MonitorUtilitiesVersion}]
+$MonitorUtilitiesDebug=False;
+$MonitorUtilitiesVersion=VersionString[$directory,"Build"->True];
 
 (* create global file *)
-gfile=FileNameJoin[{directory,$packageName,$globalsFile}];
+gfile=FileNameJoin[{$directory,$packageName,$globalsFile}];
 If[FileExistsQ[gfile], DeleteFile[gfile]];
-Save[gfile, {$FPToolsDebug, $FPToolsVersion}];
+Save[gfile, {$MonitorUtilitiesDebug, $MonitorUtilitiesVersion}];
 
 (* delete old paclet *)
-files = FileNames["*.paclet", directory];
+files = FileNames["*.paclet", $directory];
 Print["Found paclets (to be deleted): ", files];
 DeleteFile /@ files;
 
 (* build new paclet *)
 Print["Building new paclet"];
-UpdatePacletFile[pacletDirectory,directory];
+UpdatePacletFile[pacletDirectory,$directory];
 paclet = PackPaclet[pacletDirectory];
 Print["New paclet: ", paclet];
 
@@ -41,15 +40,14 @@ paclets = PacletFind[$packageName];
 Print["Found the following old paclets (uninstalling): ", Map[ #["Location"]&, paclets]];
 Map[ PacletUninstall, paclets ];
 
-
 (* install new paclet *)
 Print["Installing new paclet"]
 PacletInstall[paclet, IgnoreVersion -> True];
 
 (* Build wiki docs *)
 wikidir=FileNameJoin[{"..",$packageName<>".wiki"}];
-
-Print["Building wiki at ",wikidir]
-BuildWikiDocumentation[wikidir,$packageName];
+If[DirectoryQ[wikidir],
+    Print["Building wiki at ",wikidir];
+    BuildWikiDocumentation[wikidir,$packageName]];
 
 Print["Done"]
