@@ -18,6 +18,15 @@
 ## [Unreleased changes]
 
 ### Added
+- `FFTShift` and `InverseFFTShift` to mimic Matlab's stuff.
+
+### Changed
+- Added `GetSymbolsDefinedInMX` and `NewKernelEvaluate` documentation.
+- `GetSymbols...` returns `None` if there are no symbols defined.
+- only prints out loading message if `Debug` symbol is set. 
+
+## [1.0.1] - 2018-05-01
+### Added
 - `NewKernelEvaluate`
 - `GetSymbolsDefinedInMX`
 - `FindFaceImages`

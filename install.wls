@@ -1,7 +1,4 @@
 #!/usr/bin/env wolframscript
-#
-# paclet installer
-#
 
 (* gerbils *)
 $globalsFile="Globals.wl";

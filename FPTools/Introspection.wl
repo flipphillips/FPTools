@@ -113,13 +113,14 @@ NewKernelEvaluate[expr_] := Module[
 
 
 GetSymbolsDefinedInMX[mxfile_] := Module[
-    {tag},
-    With[{mymxfile=mxfile},
+    {tag,res},
+    res=With[{mymxfile=mxfile},
         NewKernelEvaluate[
             Block[
                 {$NewSymbol=Sow[#2<>#1, tag]&},
                 Reap[Get[mymxfile],tag][[2]]
                 ]
             ]
-        ]
+        ];
+        If[res=={{"System`Private`ConvertersPrivateDumpSymbol"}},None,res]
     ];

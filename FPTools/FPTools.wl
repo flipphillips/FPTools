@@ -1,6 +1,8 @@
+(* ::Package:: *)
+
 (* As borrowed from Arnoud's templates *)
 
-PrintTemporary["Loading ",ToString[Length[Names["FPTools`*"]]], " FPTools functions"];
+If[$FPToolsDebug,PrintTemporary["Loading ",ToString[Length[Names["FPTools`*"]]], " FPTools functions"]];
 
 BeginPackage["FPTools`",{"PacletManager`"}];
 
@@ -28,3 +30,6 @@ Module[{files},
 
 End[];
 EndPackage[];
+
+
+

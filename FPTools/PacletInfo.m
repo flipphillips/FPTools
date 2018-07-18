@@ -5,8 +5,8 @@ Paclet[
 	Publisher -> "Skidmore Vision Lab",
 	Copyright -> "©2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
-	Version -> "1.0.1",
-	BuildNumber -> "140",
+	Version -> "1.0.3",
+	BuildNumber -> "148",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
@@ -50,6 +50,8 @@ Paclet[
 
 			(* signals *)
 			"FPTools`FindZeroCrossings","FPTools`UnitizedGaussianPDF",
+			"FPTools`FFTShift",
+			"FPTools`InverseFFTShift",
 
 			(* sugar *)
 			"FPTools`ApplyIf",

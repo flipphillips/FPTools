@@ -27,3 +27,9 @@
 - add to `Usage.wl`
 - add to Documentation
 - add to test suite?
+
+### build.wls
+- fix to create variable names correctly
+
+### release.sh
+- make use pre-release setting for sending to GitHub

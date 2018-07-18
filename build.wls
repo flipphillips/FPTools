@@ -1,29 +1,27 @@
 #!/usr/bin/env wolframscript
-#
-# paclet builder
-#
 
 (* gerbils *)
 $globalsFile="Globals.wl";
-$directory = Directory[];
-$packageName = VersionInformation[$directory]["name"];
-
-pacletDirectory = FileNameJoin[{$directory, $packageName}];
+$directory= Directory[];
+$packageInfo=VersionInformation[$directory];
+$packageName=$packageInfo["name"];
 
 Print["Building ",$packageName, " from: ", $directory];
+
+pacletDirectory = FileNameJoin[{$directory, $packageName}];
 
 (* bump build *)
 VersionBumpBuild[$directory];
 
 (* globals *)
-Unprotect[{$MonitorUtilitiesDebug,$MonitorUtilitiesVersion}]
-$MonitorUtilitiesDebug=False;
-$MonitorUtilitiesVersion=VersionString[$directory,"Build"->True];
+Unprotect[{$FPToolsDebug,$FPToolsVersion}];
+$FPToolsDebug=False;
+$FPToolsVersion=VersionString[$directory,"Build"->True];
 
 (* create global file *)
 gfile=FileNameJoin[{$directory,$packageName,$globalsFile}];
 If[FileExistsQ[gfile], DeleteFile[gfile]];
-Save[gfile, {$MonitorUtilitiesDebug, $MonitorUtilitiesVersion}];
+Save[gfile, {$FPToolsDebug, $FPToolsVersion}];
 
 (* delete old paclet *)
 files = FileNames["*.paclet", $directory];

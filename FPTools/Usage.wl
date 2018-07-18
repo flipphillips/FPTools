@@ -16,6 +16,7 @@ $FPToolsDebug::usage = "$FPToolsDebug let's us know if the package was built wit
 Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
 PropertiesAvailability::usage = "PropertiesAvailability[object] returns the {available, unavailable} properties for an object.";
 PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the available properties for object.";
+
 NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result."
 GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile."
 
@@ -87,6 +88,9 @@ UnitizedGaussianPDF::usage = "UnitizedGaussian[mu,sigma] gives a pure function o
 (*Signals*)
 
 FindZeroCrossings::usage = "FindZeroCrossings[list] returns pairs that indicate zero-crossing locations in list.";
+
+FFTShift::usage = "Mimic MATLABs fftshift (ImagePeriodogram does this in more recent MMa).";
+InverseFFTShift::usage = "Mimic MATLABs ifftshift.";
 
 (* ::Section:: *)
 (*Genetic Algorithms*)
