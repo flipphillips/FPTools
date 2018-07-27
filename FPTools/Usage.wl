@@ -17,8 +17,8 @@ Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underl
 PropertiesAvailability::usage = "PropertiesAvailability[object] returns the {available, unavailable} properties for an object.";
 PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the available properties for object.";
 
-NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result."
-GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile."
+NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result.";
+GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile.";
 
 (* ::Section:: *)
 (*Entity*)
@@ -64,6 +64,9 @@ ApplyIf::usage = "ApplyIf[f,g,x] applies g to x if f[x] is True.";
 
 RectangleToDisk::usage = "RectangleToDisk[rect] takes a rectangle and returns an equivalent disk.";
 
+ToCartesianRules::usage = "A set of rules for rtp->xyz";
+ToSphericalRules::usage = "A set of rules for xyz->rtp";
+
 (* ::Section:: *)
 (*Versioning*)
 
@@ -92,9 +95,11 @@ FindZeroCrossings::usage = "FindZeroCrossings[list] returns pairs that indicate 
 FFTShift::usage = "Mimic MATLABs fftshift (ImagePeriodogram does this in more recent MMa).";
 InverseFFTShift::usage = "Mimic MATLABs ifftshift.";
 
+RealSphericalHarmonicY::usage = "RealSphericalHarmonicY[l,m,th,phi] returns real-valued spherical harmonics.";
+
 (* ::Section:: *)
 (*Genetic Algorithms*)
 
-GARepopulate::usage = "GARepopulate[pop,fitfunc] creates a new population using fitfunc."
-GAMutate::usage = "GAMutate[chromo] mutates a chromosome."
-GACrossover::usage = "GACrossover[c1,c2] performs a random crossover of c1 & c2. Returns two offspring."
+GARepopulate::usage = "GARepopulate[pop,fitfunc] creates a new population using fitfunc.";
+GAMutate::usage = "GAMutate[chromo] mutates a chromosome.";
+GACrossover::usage = "GACrossover[c1,c2] performs a random crossover of c1 & c2. Returns two offspring.";

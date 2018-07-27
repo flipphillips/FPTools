@@ -13,6 +13,7 @@
 ## More
 - Migrate Disk/Rectangle stuff 
 - Add inverse
+- Fix broken scoping in ToSpherical rules thing...
 
 ## Data
 - fork off `ffmpeg` stuff.

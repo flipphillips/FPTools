@@ -27,3 +27,12 @@ InverseFFTShift[dat_?ArrayQ, k : (_Integer?Positive | All) : All] :=
           Module[{dims = Dimensions[dat]}, 
                  RotateRight[dat, If[k === All, Ceiling[dims/2], 
                                      Ceiling[dims[[k]]/2] UnitVector[Length[dims], k]]]]
+
+RealSphericalHarmonicY[l_,m_,th_,phi_] := Module[{k},
+  k = Sqrt[((2 l + 1) (l - Abs[m])!)/((4 Pi) (l + Abs[m])!)];
+
+  Piecewise[{
+    {Sqrt[2]*(-1)^m*k*Cos[m*phi]*LegendreP[l, m, Cos[th]], m > 0}, 
+    {k[l, m]*LegendreP[l, m, Cos[th]], m == 0}, 
+    {Sqrt[2]*(-1)^m*k*Sin[(-m)*phi]*LegendreP[l, -m, Cos[th]], m < 0}}]
+]

@@ -6,7 +6,7 @@ Paclet[
 	Copyright -> "©2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
 	Version -> "1.0.3",
-	BuildNumber -> "148",
+	BuildNumber -> "154",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
@@ -38,6 +38,7 @@ Paclet[
 			"FPTools`BlurFaces","FPTools`FindFaceImages",
 			"FPTools`AddAlphaChannel",
 			"FPTools`LensDistortPoint", "FPTools`LensDistortionCorrection",
+
 			(* ffmpeg *)
 			"FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportMP4Frames", "FPTools`ImportWebFrame",
 			
@@ -52,9 +53,12 @@ Paclet[
 			"FPTools`FindZeroCrossings","FPTools`UnitizedGaussianPDF",
 			"FPTools`FFTShift",
 			"FPTools`InverseFFTShift",
+			"FPTools`RealSphericalHarmonicY",
 
 			(* sugar *)
 			"FPTools`ApplyIf",
+			"FPTools`ToCartesianRules",
+			"FPTools`ToSphericalRules",
 
 			(* versioning *)
 			"FPTools`VersionInformation",

@@ -19,6 +19,8 @@
 
 ### Added
 - `FFTShift` and `InverseFFTShift` to mimic Matlab's stuff.
+- `RealSphericalHarmonicY` real-valued SHs
+- `ToCartesianRules` and `ToSphericalRules` handy xyz<->rtp 
 
 ### Changed
 - Added `GetSymbolsDefinedInMX` and `NewKernelEvaluate` documentation.
