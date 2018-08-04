@@ -33,6 +33,6 @@ RealSphericalHarmonicY[l_,m_,th_,phi_] := Module[{k},
 
   Piecewise[{
     {Sqrt[2]*(-1)^m*k*Cos[m*phi]*LegendreP[l, m, Cos[th]], m > 0}, 
-    {k[l, m]*LegendreP[l, m, Cos[th]], m == 0}, 
+    {k*LegendreP[l, m, Cos[th]], m == 0}, 
     {Sqrt[2]*(-1)^m*k*Sin[(-m)*phi]*LegendreP[l, -m, Cos[th]], m < 0}}]
 ]

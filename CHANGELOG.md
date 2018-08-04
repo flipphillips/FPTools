@@ -17,6 +17,10 @@
 
 ## [Unreleased changes]
 
+
+* * *
+
+## [1.0.3] - 2018-08-04
 ### Added
 - `FFTShift` and `InverseFFTShift` to mimic Matlab's stuff.
 - `RealSphericalHarmonicY` real-valued SHs
