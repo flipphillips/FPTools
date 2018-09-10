@@ -34,3 +34,7 @@
 
 ### release.sh
 - make use pre-release setting for sending to GitHub
+
+### Improve ParallelImageApplyIndexed
+
+### Make 'UpdateFlipTools'

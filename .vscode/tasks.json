@@ -17,6 +17,12 @@
             "type": "shell",
             "command": "/usr/bin/env wolframscript -f install.wls",
             "group": "build"
+        },
+        {
+            "label": "release",
+            "type": "shell",
+            "command": "./release.sh",
+            "group": "build"
         }
     ]
 }

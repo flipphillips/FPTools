@@ -20,6 +20,8 @@ PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the
 NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result.";
 GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile.";
 
+GetCompilerFunctions::usage = "GetCompilerFunctions[] returns the list of functions that are compilable.";
+
 (* ::Section:: *)
 (*Entity*)
 
@@ -48,6 +50,7 @@ LensDistortPoint::usage = "LensDistortPoint[{x,y},{p1,p2},{k1,...}] projects poi
 
 LensDistortionCorrection::usage = "LensDistortionCorrection[image,{tx,ty},theta,{p1,p1},{k1,k2,k3...}] performs a lens distortion correction along with a generalized translation (t) and rotation (theta). p1 and p2 specify 1st order astygmatism and k1-6 the different orders of distortion beyond that. Note you only need to supply k's up to the desired order of correction.";
 
+ParallelImageApplyIndexed::usage = "ParallelImageApplyIndexed[f,im] maps f over im using parallel kernels. At this point, its only a single image plane";
 
 (* ::Section:: *)
 (*Internet*)
@@ -87,6 +90,8 @@ ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as
 
 UnitizedGaussianPDF::usage = "UnitizedGaussian[mu,sigma] gives a pure function of a PDF whose value at the mean = 1.0.";
 
+Overlap::usage = "Overlap[l1,l2] gives the intersection of the range of two lists.";
+
 (* ::Section:: *)
 (*Signals*)
 
@@ -103,3 +108,21 @@ RealSphericalHarmonicY::usage = "RealSphericalHarmonicY[l,m,th,phi] returns real
 GARepopulate::usage = "GARepopulate[pop,fitfunc] creates a new population using fitfunc.";
 GAMutate::usage = "GAMutate[chromo] mutates a chromosome.";
 GACrossover::usage = "GACrossover[c1,c2] performs a random crossover of c1 & c2. Returns two offspring.";
+
+(* ::Section:: *)
+(*Statistics*)
+LocationReport::usage = "LocationReport[list] gives the Mean, HarmonicMean, and Median location statistics for list.";
+DispersionReport::usage = "DispersionReport[list] gives the Variance, StandardDeviation, SampleRange, MeanDeviation, MedianDeviation, and QuartileDeviation dispersion statistics for list.";
+ShapeReport::usage = "ShapeReport[list] gives the Skewness, QuartileSkewness, and KurtosisExcess shape statistics for list.";
+
+StandardDeviationMLE::usage = "StandardDeviationMLE[list] gives the standard deviation of the entries in list.  Division by n is used, giving a maximum likelihood estimate of the population standard deviation.";
+
+VarianceMLE::usage = "VarianceMLE[list] gives the variance of the entries in list. Division by n (rather than n-1) is used, giving a maximum likelihood estimate of the population variance (use Variance[list] for an unbiased estimate).";
+
+StandardErrorOfSampleMean::usage = "StandardErrorOfSampleMean[list] gives an unbiased estimate of the standard error (standard deviation) of the sample mean, using the entries in list as a sample from the population.";
+
+VarianceOfSampleMean::usage = "VarianceOfSampleMean[list] gives an unbiased estimate of the variance of the sample mean, using the entries in list as a sample from the population.";
+
+CoefficientOfVariation::usage = "CoefficientOfVariation[list] gives the coefficient of variation, defined as the ratio of the standard deviation to the mean of the entries in list. If the entries are not all positive, then $Failed is returned."
+
+ZeroMean::usage = "Zeroize the data about the mean.";

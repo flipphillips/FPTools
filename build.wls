@@ -16,7 +16,7 @@ VersionBumpBuild[$directory];
 (* globals *)
 Unprotect[{$FPToolsDebug,$FPToolsVersion}];
 $FPToolsDebug=False;
-$FPToolsVersion=VersionString[$directory,"Build"->True];
+$FPToolsVersion=VersionString[$directory,"Build"->True,"Prerelease"->True];
 
 (* create global file *)
 gfile=FileNameJoin[{$directory,$packageName,$globalsFile}];

@@ -30,3 +30,5 @@ ImportAsDataset[f_,
    
    True,
    Dataset[raw]]]
+
+Overlap[d1_,d2_]:= {Max[{Min[d1], Min[d2]}],Min[{Max[d1], Max[d2]}]}

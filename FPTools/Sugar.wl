@@ -7,7 +7,7 @@ ApplyIf[f_, g_][x_] := ApplyIf[f, g, x];
 
 ToCartesianRules[] := 
   MapThread[
-   Rule, {{r, \[Theta], \[Phi]}, ToSphericalCoordinates[{x, y, z}]}]
+   Rule, {{r, \[Theta], \[Phi]}, ToSphericalCoordinates[{x, y, z}]}];
 
 ToSphericalRules[] := 
   MapThread[

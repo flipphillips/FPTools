@@ -5,8 +5,8 @@ Paclet[
 	Publisher -> "Skidmore Vision Lab",
 	Copyright -> "©2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
-	Version -> "1.0.4",
-	BuildNumber -> "160",
+	Version -> "1.0.6",
+	BuildNumber -> "185",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
@@ -21,7 +21,7 @@ Paclet[
 			"FPTools`$FPToolsVersion","FPTools`$FPToolsDebug",
 
 			(* data *)
-			"FPTools`ImportAsDataset", 
+			"FPTools`ImportAsDataset", "FPTools`Overlap",
 			
 			(* Entity *)
 			"FPTools`EntityPropertiesDataset",
@@ -38,6 +38,7 @@ Paclet[
 			"FPTools`BlurFaces","FPTools`FindFaceImages",
 			"FPTools`AddAlphaChannel",
 			"FPTools`LensDistortPoint", "FPTools`LensDistortionCorrection",
+			"FPTools`ParallelImageApplyIndexed",
 
 			(* ffmpeg *)
 			"FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportMP4Frames", "FPTools`ImportWebFrame",
@@ -48,6 +49,7 @@ Paclet[
 			(* introspection *)
 			"FPTools`Spelunk","FPTools`PropertiesAvailability","FPTools`PropertiesDataset",
 			"FPTools`NewKernelEvaluate","FPTools`GetSymbolsDefinedInMX",
+			"FPTools`GetCompilerFunctions",
 
 			(* signals *)
 			"FPTools`FindZeroCrossings","FPTools`UnitizedGaussianPDF",
@@ -55,6 +57,17 @@ Paclet[
 			"FPTools`InverseFFTShift",
 			"FPTools`RealSphericalHarmonicY",
 
+			(* statistics *)
+			"FPTools`LocationReport",
+			"FPTools`ShapeReport",
+			"FPTools`DispersionReport",
+			"FPTools`StandardDeviationMLE",
+			"FPTools`VarianceMLE",
+			"FPTools`StandardErrorOfSampleMean",
+			"FPTools`VarianceOfSampleMean",
+			"FPTools`CoefficientOfVariation",
+			"FPTools`ZeroMean",
+			
 			(* sugar *)
 			"FPTools`ApplyIf",
 			"FPTools`ToCartesianRules",

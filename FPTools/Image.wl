@@ -164,3 +164,22 @@ LensDistortionCorrection[i_,{tx_,ty_},\[Theta]_,{p1_,p2_},kVec_,opt:OptionsPatte
 	rt=ut@*RotationTransform[\[Theta]];
 	
 	ImageTransformation[i,rt[LensDistortPoint[tt[#],{p1,p2},kVec]]&,PlotRange->{{0.1,0.9},{0.1,0.5}},opt]]
+
+(* this is still in development-ville, right now it is for a single image plane *)
+
+ParallelImageApplyIndexed[f_, img_] := 
+ Module[{rows, cols, ix, id, decode, pd, res},
+  {rows, cols} = ImageDimensions[img];
+  
+  decode[i_] := {Quotient[i - 1, rows] + 1, Mod[i - 1, rows] + 1};
+  
+  (*ix=Table[{r,c},{r,1,cols},{c,1,rows}];*)
+  
+  ix = Table[i, {i, 1, rows*cols}];
+  id = Flatten[ImageData[img]];
+  
+  pd = Transpose[{id, ix}];
+  
+  res = ParallelMap[f[#[[1]], decode[#[[2]]]] &, pd];
+  Image[Partition[res, rows]]
+  ]

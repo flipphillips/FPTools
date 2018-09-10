@@ -124,3 +124,5 @@ GetSymbolsDefinedInMX[mxfile_] := Module[
         ];
         If[res=={{"System`Private`ConvertersPrivateDumpSymbol"}},None,res]
     ];
+
+GetCompilerFunctions[] := Sort[Compile`CompilerFunctions[]]

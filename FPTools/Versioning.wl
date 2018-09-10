@@ -8,7 +8,7 @@ VersionInformation[path_] := Module[{vp},
    Association[Import[vp]],
    None]]
 
-VersionString[path_, OptionsPattern[{"Build" -> False}]] := 
+VersionString[path_, OptionsPattern[{"Build"->False,"Prerelease"->False}]] := 
  Module[{vi, vs},
   vi = VersionInformation[path];
   If[vi === None, Return[""]];
@@ -18,6 +18,8 @@ VersionString[path_, OptionsPattern[{"Build" -> False}]] :=
       vi /@ {"major_version", "minor_version", "revision_number"}, 
      "."]];
   
+  vs = If[OptionValue["Prerelease"]&&vi["prerelease"],vs<>"pre",vs];
+
   If[OptionValue["Build"], 
    vs <> " build " <> ToString[vi["build_number"]],
    vs]]

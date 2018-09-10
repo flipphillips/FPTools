@@ -16,7 +16,14 @@
 -->
 
 ## [Unreleased changes]
+### Added
+- `Statistics.wl` - routines from the pre v5 stats packages
+- `Overlap` - where do two lists of events overlap. There's probably a time-series function that does this but I just have data and don't want to have to cram it into a TS. (e.g., my data is spatial so TS is the wrong metaphor)
+- `ParallelImageApplyIndexed`
+- `GetCompilerFunctions`
 
+### Fixed
+- missing trailing ; in `Sugar.wl`
 
 * * *
 
