@@ -52,6 +52,9 @@ LensDistortionCorrection::usage = "LensDistortionCorrection[image,{tx,ty},theta,
 
 ParallelImageApplyIndexed::usage = "ParallelImageApplyIndexed[f,im] maps f over im using parallel kernels. At this point, its only a single image plane";
 
+InterleavingQ::usage = "InterleavingQ[im] returns True if im is interleaved.";
+ImageInformation::usage = "ImageInformation[im] returns a Dataset of the image information as per the FE's viewer.";
+
 (* ::Section:: *)
 (*Internet*)
 

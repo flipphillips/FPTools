@@ -183,3 +183,12 @@ ParallelImageApplyIndexed[f_, img_] :=
   res = ParallelMap[f[#[[1]], decode[#[[2]]]] &, pd];
   Image[Partition[res, rows]]
   ]
+
+InterleavingQ[im_Image] := Interleaving /. Options[im]
+
+ImageInformation[im_Image] := Module[{stuff},
+  stuff = {ImageDimensions, ImageColorSpace, AlphaChannelQ, 
+  ImageChannels, InterleavingQ, ImageType, ByteCount}; 
+  Dataset[AssociationThread[stuff, Through[stuff[im]]]]
+ ]
+ 

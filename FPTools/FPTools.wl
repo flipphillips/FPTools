@@ -4,7 +4,7 @@
 
 If[$FPToolsDebug,PrintTemporary["Loading ",ToString[Length[Names["FPTools`*"]]], " FPTools functions"]];
 
-BeginPackage["FPTools`",{"PacletManager`"}];
+BeginPackage["FPTools`",{"PacletManager`","Prototypes`"}];
 
 Get[FileNameJoin[{DirectoryName[$InputFileName],"Usage.wl"}]];
 

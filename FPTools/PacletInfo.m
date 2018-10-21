@@ -5,8 +5,8 @@ Paclet[
 	Publisher -> "Skidmore Vision Lab",
 	Copyright -> "©2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
-	Version -> "1.0.6",
-	BuildNumber -> "185",
+	Version -> "1.0.8",
+	BuildNumber -> "193",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
@@ -39,6 +39,7 @@ Paclet[
 			"FPTools`AddAlphaChannel",
 			"FPTools`LensDistortPoint", "FPTools`LensDistortionCorrection",
 			"FPTools`ParallelImageApplyIndexed",
+			"FPTools`InterleavingQ","FPTools`ImageInformation",
 
 			(* ffmpeg *)
 			"FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportMP4Frames", "FPTools`ImportWebFrame",

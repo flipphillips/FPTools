@@ -1,9 +1,9 @@
 {
   "name": "FPTools",
-  "prerelease": true,
+  "prerelease": false,
   "major_version": 1,
   "minor_version": 0,
-  "revision_number": 7,
-  "build_number": 186,
-  "date": "Sun Sep  9 21:33:40 EDT 2018"
+  "revision_number": 9,
+  "build_number": 194,
+  "date": "Sun Oct 21 12:37:48 EDT 2018"
 }
