@@ -31,6 +31,7 @@
 
 ### build.wls
 - fix to create variable names correctly
+- check to see if `FPTools` are already installed, because otherwise we need to bootstrap the build
 
 ### release.sh
 - make use pre-release setting for sending to GitHub

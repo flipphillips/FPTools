@@ -5,8 +5,8 @@ Paclet[
 	Publisher -> "Skidmore Vision Lab",
 	Copyright -> "©2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
-	Version -> "1.0.8",
-	BuildNumber -> "193",
+	Version -> "1.0.9",
+	BuildNumber -> "198",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
@@ -32,6 +32,16 @@ Paclet[
 
 			(* Graphics *)
 			"FPTools`RectangleToDisk",
+
+			(* Geometry *)
+			"FPTools`RectangularToPhiTheta",
+			"FPTools`PhiThetaToDirection",
+			"FPTools`RectangularToDirection",
+			"FPTools`DirectionToRectangular",
+			"FPTools`CircularToAngular",
+			"FPTools`AngularToDirection",
+			"FPTools`CircularToDirection",
+			"FPTools`DirectionToCircular",
 
 			(* Image *)
 			"FPTools`ImageIdentifyFP",
