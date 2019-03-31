@@ -2,5 +2,6 @@
     "cSpell.words": [
         "Buzing's",
         "paclet"
-    ]
+    ],
+    "python.pythonPath": "/anaconda3/bin/python"
 }
