@@ -3,10 +3,10 @@ Paclet[
 	Description -> "Tools for introspection, debugging, syntatic sugar, etc.",
 	Creator -> "Flip Phillips <flip@skidmore.edu>",
 	Publisher -> "Skidmore Vision Lab",
-	Copyright -> "©2018- Flip Phillips & Misc Contributors",
+	Copyright -> "(c) 2018- Flip Phillips & Misc Contributors",
 	License -> "MIT",
-	Version -> "1.0.9",
-	BuildNumber -> "201",
+	Version -> "1.0.11",
+	BuildNumber -> "203",
 	MathematicaVersion -> "11.2+",
 	URL -> "https://github.com/flipphillips/FPTools",
 	Thumbnail -> "Documentation/icon.png",
@@ -18,20 +18,23 @@ Paclet[
 	 { "Kernel", 
 		Symbols -> {
 			(* globals *)
-			"FPTools`$FPToolsVersion","FPTools`$FPToolsDebug",
+			"FPTools`$FPToolsVersion",
+			"FPTools`$FPToolsDebug",
 
 			(* data *)
-			"FPTools`ImportAsDataset", "FPTools`Overlap",
+			"FPTools`ImportAsDataset", 
+			"FPTools`Overlap",
 			
 			(* Entity *)
 			"FPTools`EntityPropertiesDataset",
-			"FPTools`ConceptBroaden","FPTools`ConceptDistance","FPTools`ConceptDepth",
+			"FPTools`ConceptBroaden",
+			"FPTools`ConceptDistance",
+			"FPTools`ConceptDepth",
 		
 			(* GAs *)
-			"FPTools`GARepopulate","FPTools`GAMutate","FPTools`GACrossover",
-
-			(* Graphics *)
-			"FPTools`RectangleToDisk",
+			"FPTools`GARepopulate",
+			"FPTools`GAMutate",
+			"FPTools`GACrossover",
 
 			(* Geometry *)
 			"FPTools`RectangularToPhiTheta",
@@ -42,28 +45,43 @@ Paclet[
 			"FPTools`AngularToDirection",
 			"FPTools`CircularToDirection",
 			"FPTools`DirectionToCircular",
+			"FPTools`ToCartesianRules",
+			"FPTools`ToSphericalRules",
+
+			(* Graphics *)
+			"FPTools`RectangleToDisk",
 
 			(* Image *)
 			"FPTools`ImageIdentifyFP",
-			"FPTools`BlurFaces","FPTools`FindFaceImages",
+			"FPTools`BlurFaces",
+			"FPTools`FindFaceImages",
 			"FPTools`AddAlphaChannel",
-			"FPTools`LensDistortPoint", "FPTools`LensDistortionCorrection",
+			"FPTools`LensDistortPoint",
+			"FPTools`LensDistortionCorrection",
 			"FPTools`ParallelImageApplyIndexed",
-			"FPTools`InterleavingQ","FPTools`ImageInformation",
+			"FPTools`InterleavingQ",
+			"FPTools`ImageInformation",
 
-			(* ffmpeg *)
-			"FPTools`$FFMpegPath", "FPTools`ImportMP4Frame", "FPTools`ImportMP4Frames", "FPTools`ImportWebFrame",
+			(* image - ffmpeg *)
+			"FPTools`$FFMpegPath",
+			"FPTools`ImportMP4Frame",
+			"FPTools`ImportMP4Frames",
+			"FPTools`ImportWebFrame",
 			
 			(* internet *)
 			"FPTools`$MachineAddressesExternal",
 
 			(* introspection *)
-			"FPTools`Spelunk","FPTools`PropertiesAvailability","FPTools`PropertiesDataset",
-			"FPTools`NewKernelEvaluate","FPTools`GetSymbolsDefinedInMX",
+			"FPTools`Spelunk",
+			"FPTools`PropertiesAvailability",
+			"FPTools`PropertiesDataset",
+			"FPTools`NewKernelEvaluate",
+			"FPTools`GetSymbolsDefinedInMX",
 			"FPTools`GetCompilerFunctions",
 
 			(* signals *)
-			"FPTools`FindZeroCrossings","FPTools`UnitizedGaussianPDF",
+			"FPTools`FindZeroCrossings",
+			"FPTools`UnitizedGaussianPDF",
 			"FPTools`FFTShift",
 			"FPTools`InverseFFTShift",
 			"FPTools`RealSphericalHarmonicY",
@@ -81,13 +99,13 @@ Paclet[
 			
 			(* sugar *)
 			"FPTools`ApplyIf",
-			"FPTools`ToCartesianRules",
-			"FPTools`ToSphericalRules",
 
 			(* versioning *)
 			"FPTools`VersionInformation",
-			"FPTools`VersionString","FPTools`VersionBuildString",
-			"FPTools`VersionWriteInformation","FPTools`VersionBumpBuild",
+			"FPTools`VersionString",
+			"FPTools`VersionBuildString",
+			"FPTools`VersionWriteInformation",
+			"FPTools`VersionBumpBuild",
 			"FPTools`UpdatePacletFile"
 
 		},
