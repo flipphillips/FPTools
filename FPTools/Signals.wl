@@ -21,13 +21,14 @@ UnitizedGaussianPDF[\[Mu]_, \[Sigma]_] := Module[{pdf},
 FFTShift[dat_?ArrayQ, k : (_Integer?Positive | All) : All] :=
          Module[{dims = Dimensions[dat]}, 
                 RotateRight[dat, If[k === All, Quotient[dims, 2], 
-                                    Quotient[dims[[k]], 2] UnitVector[Length[dims], k]]]]
+                                    Quotient[dims[[k]], 2]*UnitVector[Length[dims], k]]]]
 
 InverseFFTShift[dat_?ArrayQ, k : (_Integer?Positive | All) : All] := 
           Module[{dims = Dimensions[dat]}, 
                  RotateRight[dat, If[k === All, Ceiling[dims/2], 
-                                     Ceiling[dims[[k]]/2] UnitVector[Length[dims], k]]]]
+                                     Ceiling[dims[[k]]/2]*UnitVector[Length[dims], k]]]]
 
+(* Real Spherical Harmonics - with Condon-Shortley phase *)
 RealSphericalHarmonicY[l_,m_,th_,phi_] := Module[{k},
   k = Sqrt[((2 l + 1) (l - Abs[m])!)/((4 Pi) (l + Abs[m])!)];
 

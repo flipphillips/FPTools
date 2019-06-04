@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Automatically Generated*)
 
 
@@ -12,25 +12,7 @@ $FPToolsVersion::usage = "$FPToolsVersion gives its best guess as to the version
 $FPToolsDebug::usage = "$FPToolsDebug let's us know if the package was built with any debugging tools.";
 
 
-(* ::Section:: *)
-(*Introspection*)
-
-
-(* ::Text:: *)
-(*Metainformation about Mathematica. Borrowed from various stackexchange posts and some of my own code.*)
-
-
-Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
-PropertiesAvailability::usage = "PropertiesAvailability[object] returns the {available, unavailable} properties for an object.";
-PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the available properties for object.";
-
-NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result.";
-GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile.";
-
-GetCompilerFunctions::usage = "GetCompilerFunctions[] returns the list of functions that are compilable.";
-
-
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Data*)
 
 
@@ -44,7 +26,7 @@ ImportAsDataset::usage = "ImportAsDataset[f] imports f and uses the first row as
 Overlap::usage = "Overlap[l1,l2] gives the intersection of the range of two lists.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Entity*)
 
 
@@ -58,7 +40,7 @@ ConceptDistance::usage = "ConceptDistance[entitya,entityb] determines the distan
 ConceptDepth::usage = "ConceptDepth[entity] computes the distance to the root of the Entity tree.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Genetic Algorithms*)
 
 
@@ -71,7 +53,7 @@ GAMutate::usage = "GAMutate[chromo] mutates a chromosome.";
 GACrossover::usage = "GACrossover[c1,c2] performs a random crossover of c1 & c2. Returns two offspring.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Geometry*)
 
 
@@ -95,14 +77,14 @@ CircularToDirection::usage = "CircularToDirection[{u,v}] gives the direction vec
 DirectionToCircular::usage = "DirectionToCircular[{dx,dy,dz}] gives index into circular texture space {u,v} from the direction vector.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Graphics*)
 
 
 RectangleToDisk::usage = "RectangleToDisk[rect] takes a rectangle and returns an equivalent disk.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Image*)
 
 
@@ -149,7 +131,7 @@ InterleavingQ::usage = "InterleavingQ[im] returns True if im is interleaved.";
 ImageInformation::usage = "ImageInformation[im] returns a Dataset of the image information as per the FE's viewer.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Internet*)
 
 
@@ -160,7 +142,25 @@ ImageInformation::usage = "ImageInformation[im] returns a Dataset of the image i
 $MachineAddressesExternal::usage = "$MachineAddressesExternal gives the IP address of this machine as seen by the outside world.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
+(*Introspection*)
+
+
+(* ::Text:: *)
+(*Metainformation about Mathematica. Borrowed from various stackexchange posts and some of my own code.*)
+
+
+Spelunk::usage = "Spelunk[symbol] will discover the definition of symbol. Underlined symbols in the output are clickable.";
+PropertiesAvailability::usage = "PropertiesAvailability[object] returns the {available, unavailable} properties for an object.";
+PropertiesDataset::usage = "PropertiesDataset[object] returns a TableForm of the available properties for object.";
+
+NewKernelEvaluate::usage = "NewKernelEvaluate[expr] evaluates expr in a fresh, clean kernel and returns the result.";
+GetSymbolsDefinedInMX::usage = "GetSymbolsDefinedInMX[mxfile] returns a list of symbols defined in mxfile.";
+
+GetCompilerFunctions::usage = "GetCompilerFunctions[] returns the list of functions that are compilable.";
+
+
+(* ::Section::Closed:: *)
 (*Signals*)
 
 
@@ -181,7 +181,7 @@ RealSphericalHarmonicY::usage = "RealSphericalHarmonicY[l,m,th,phi] returns real
 UnitizedGaussianPDF::usage = "UnitizedGaussian[mu,sigma] gives a pure function of a PDF whose value at the mean = 1.0.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Statistics*)
 
 
@@ -201,7 +201,7 @@ CoefficientOfVariation::usage = "CoefficientOfVariation[list] gives the coeffici
 ZeroMean::usage = "Zeroize the data about the mean.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Sugar*)
 
 
@@ -212,7 +212,7 @@ ZeroMean::usage = "Zeroize the data about the mean.";
 ApplyIf::usage = "ApplyIf[f,g,x] applies g to x if f[x] is True.";
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Versioning*)
 
 

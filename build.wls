@@ -1,5 +1,7 @@
 #!/usr/bin/env wolframscript
 
+Get["FPTools`Versioning`"];
+
 (* gerbils *)
 $globalsFile="Globals.wl";
 $directory= Directory[];
