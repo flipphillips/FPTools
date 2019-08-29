@@ -165,7 +165,9 @@ LensDistortionCorrection[i_,{tx_,ty_},\[Theta]_,{p1_,p2_},kVec_,opt:OptionsPatte
 	
 	ImageTransformation[i,rt[LensDistortPoint[tt[#],{p1,p2},kVec]]&,PlotRange->{{0.1,0.9},{0.1,0.5}},opt]]
 
+
 (* this is still in development-ville, right now it is for a single image plane *)
+
 
 ParallelImageApplyIndexed[f_, img_] := 
  Module[{rows, cols, ix, id, decode, pd, res},
@@ -184,11 +186,12 @@ ParallelImageApplyIndexed[f_, img_] :=
   Image[Partition[res, rows]]
   ]
 
+
 InterleavingQ[im_Image] := Interleaving /. Options[im]
+
 
 ImageInformation[im_Image] := Module[{stuff},
   stuff = {ImageDimensions, ImageColorSpace, AlphaChannelQ, 
   ImageChannels, InterleavingQ, ImageType, ByteCount}; 
   Dataset[AssociationThread[stuff, Through[stuff[im]]]]
  ]
- 
